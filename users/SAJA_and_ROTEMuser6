@@ -10,15 +10,22 @@ log_action() {
 }
 
 #exist check
-source_file="example.txt"
-des="/backup"
+read -p "Enter the source file: " source_file
+echo "$source_file"
+read -p "ENTER des: " des
+echo "$des"
+
 	if [[ ! -f "$source_file" ]]; then
 		log_action "FILE_CHECK" "Eror: Source file '$source_file' does not exist"
 		echo "Error: Source file '$source_file' does not exist"
 		exit 1
 	fi
 
-log_action "FILE_CHECK" "Source file '$source_file' exist"
+	 if [[ ! -d "$des" ]]; then
+        log_action "DEST_CHECK" "Eror: destination dir '$des'"
+        echo "error"
+        exit 1
+        fi
 
 #cal
 source_size=$(du -sb "$source_file" | awk '{print $1}')
