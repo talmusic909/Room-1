@@ -44,3 +44,22 @@ for result in "${sorted_results[@]}"; do
         echo "$domain | Timeout"
     fi
 done
+
+
+
+log_message() {
+    local level="$1"
+    local message="$2"
+    echo "$(date '+%Y-%m-%d %H:%M:%S') - [$level] - $message" >> "$LOG_FILE"
+}
+
+
+
+log_message "INFO" "Pinged $service. Average latency: $avg ms"
+log_message "WARNING" "Ping to $service timed out"
+
+
+
+logs)
+    tail -n 10 "$LOG_FILE"
+    ;;
