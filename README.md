@@ -19,7 +19,7 @@
 
 * [Tal Tson]
 * [May Sabag]
-* [Yarden ]
+* [Yarden Brami]
 * [Sabrin Katrus]
 * [Rotem Haimovich]
 * [ Saja Ibrahem ]
