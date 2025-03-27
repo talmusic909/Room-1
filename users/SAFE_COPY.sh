@@ -43,10 +43,10 @@ log_action "SPACE_CHECK" "Source Size: $source_size bytes, Available space: $ava
 #copy file
 	cp "$source_file" "$des"
 	if [[ $? -eq 0 ]]; then
-	log_action "FILE_COPY" "File '$source_file' copied successfully to '$des'
+	log_action "FILE_COPY" "File '$source_file' copied successfully to '$des'"
 	echo "File copied successfully"
 else
-	log_action "FILE_COPY" "Error copying file '$source_file' to '$des'
+	log_action "FILE_COPY" "Error copying file '$source_file' to '$des'"
 	echo "Error copying file"
 	exit 1
 	fi
