@@ -48,6 +48,8 @@
    * (This script is used to control the `pingstorm.sh` script (start, stop, status, view logs).)
 `
 
+
+![diagram](images/pingstorm-flow.png)
 הסבר מפורט יותר על הדיאגרמה:
 
 אלמנטים מרכזיים:
